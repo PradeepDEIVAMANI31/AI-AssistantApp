@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AIAssistantApp</string>
+    <string name="permission_denied_message">Microphone permission denied</string>
+    <string name="permission_granted_message">Microphone permission granted</string>
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- EditText for displaying speech-to-text result -->
+    <EditText
+        android:id="@+id/mtlTxtResult"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="Speech-to-text result will appear here"
+        android:gravity="start|top"
+        android:padding="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="20dp"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:overScrollMode="always"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Clear Button -->
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mtlTxtResult"
+        android:layout_marginTop="10dp"
+        android:text="Clear Result"
+        android:onClick="clearResult"
+        android:backgroundTint="#FF6F61"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Export Button -->
+    <Button
+        android:id="@+id/btnExport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnClear"
+        android:layout_marginTop="10dp"
+        android:text="Export Result"
+        android:onClick="exportResult"
+        android:backgroundTint="#007ACC"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Toggle Listening Button -->
+    <Button
+        android:id="@+id/btnToggleListening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnExport"
+        android:layout_marginTop="10dp"
+        android:text="Start Listening"
+        android:onClick="toggleListening"
+        android:backgroundTint="#28A745"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Open Calendar Button -->
+    <Button
+        android:id="@+id/btnOpenCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Calendar"
+        android:onClick="openCalendar"
+        android:layout_below="@id/btnToggleListening"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Add Event to Calendar Button -->
+    <Button
+        android:id="@+id/btnAddEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnOpenCalendar"
+        android:layout_marginTop="10dp"
+        android:text="Add Event to Calendar"
+        android:onClick="addEventToCalendar"
+        android:backgroundTint="#007ACC"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Process and Add Event Button -->
+    <Button
+        android:id="@+id/btnProcessData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddEvent"
+        android:layout_marginTop="10dp"
+        android:text="Process and Add to Calendar"
+        android:onClick="extractDataAndAddToCalendar"
+        android:backgroundTint="#FF5722"
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout>
