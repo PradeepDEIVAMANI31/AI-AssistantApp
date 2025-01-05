@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 // Format the selected date as a string
                 selectedDate = year + "-" + (monthOfYear + 1) + "-" + dayOfMonth;
-                mtlTxtResult.setText(selectedDate); // Display the selected date in the EditText
+                mtlTxtResult.setText(selectedDate);
             }
         }, year, month, day);
 
